@@ -1,0 +1,297 @@
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: white;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Personal Profile */
+.personal-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 16px;
+  margin: 0 auto;
+  max-width: 768px;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.name {
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  background: linear-gradient(to right, #dc2626, #000000);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.subtitle {
+  font-size: 24px;
+  margin-top: 8px;
+  color: #666;
+}
+
+/* Bio Section */
+.bio-section {
+  width: 100%;
+  margin-bottom: 48px;
+  background-color: #f9fafb;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+}
+
+.bio-text {
+  font-size: 18px;
+  color: #4b5563;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+/* Button Section */
+.button-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.message-button {
+  background-color: #dc2626;
+  color: white;
+  padding: 16px 32px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 18px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.message-button:hover {
+  background-color: #b91c1c;
+  transform: scale(1.05);
+}
+
+.message-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.5);
+}
+
+/* Footer */
+.footer {
+  width: 100%;
+  text-align: center;
+  color: #6b7280;
+  font-size: 14px;
+  margin-top: auto;
+  padding-top: 40px;
+}
+
+.footer-subtitle {
+  margin-top: 4px;
+}
+
+/* RKO Image */
+.rko-image {
+  position: fixed;
+  bottom: 16px;
+  left: 16px;
+  width: 320px;
+  z-index: 10;
+  opacity: 0.95;
+  transition: opacity 0.3s;
+}
+
+.rko-image:hover {
+  opacity: 1;
+}
+
+.rko-container {
+  background-color: #1f2937;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.rko-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  animation: rko-slam 1.5s infinite ease-in-out;
+}
+
+.rko-banner {
+  background-color: #dc2626;
+  padding: 8px;
+  text-align: center;
+}
+
+.banner-text {
+  font-weight: 700;
+  font-size: 20px;
+  color: white;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background-color: rgba(0, 0, 0, 0.7);
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s;
+}
+
+.modal.open {
+  display: flex;
+}
+
+.modal-content {
+  background: linear-gradient(to bottom, #dc2626, #1f2937);
+  border-radius: 8px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  max-width: 28rem;
+  width: 100%;
+  margin: 0 16px;
+  animation: fadeInUp 0.3s ease-out;
+  border: 2px solid #d1d5db;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 24px 24px 16px;
+}
+
+.modal-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.close-button {
+  color: white;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  transition: color 0.15s;
+}
+
+.close-button:hover {
+  color: #f3f4f6;
+}
+
+.modal-body {
+  padding: 16px 24px;
+  margin-bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.3);
+  margin: 0 24px;
+  border-radius: 6px;
+}
+
+.modal-body p {
+  font-size: 18px;
+  color: white;
+  font-weight: 500;
+}
+
+.modal-footer {
+  padding: 24px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.close-modal-button {
+  background-color: #dc2626;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  letter-spacing: 0.05em;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.close-modal-button:hover {
+  background-color: #b91c1c;
+}
+
+.close-modal-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.5);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes rko-slam {
+  0% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-15px) rotate(5deg); }
+  50% { transform: translateY(0) rotate(0deg); }
+  75% { transform: translateY(-5px) rotate(-3deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .name {
+    font-size: 36px;
+  }
+  
+  .subtitle {
+    font-size: 18px;
+  }
+  
+  .bio-text {
+    font-size: 16px;
+  }
+  
+  .rko-image {
+    width: 240px;
+  }
+  
+  .message-button {
+    padding: 12px 24px;
+    font-size: 16px;
+  }
+}
